@@ -8,12 +8,12 @@
 ##### Enter the command _python manage.py runserver_ to run on the local server
 ##### To run, you can create file runserver.py in root/, enter the follwin code in it, and run it
 
-'''python
+```python
 
 import subprocess
 
 subprocess.run(["python", "manage.py", "runserver"])
 
-'''
+```
 
-'info : The superuser username and password are both reza'
+`info : The superuser username and password are both reza`
