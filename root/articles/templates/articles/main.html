@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} articles {% endblock %}
+
+{% block content %}
+
+    <div class="card" >
+        {% for article in articles %}
+        <ul class="list-group list-group-flush">
+            <a class ="card-body" style="color:rgb(79, 20, 216); width: 100rem; height: 3.0rem;" href="{% url 'articles:show-article' article.id %}"> <h7>{{article.title}}</h1></a> 
+            </ul>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block background-BF %}
+    <style>
+    body {
+        background-image: url("{% static 'chatroom/Library.png' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 200vh;
+        margin: 0;
+    }
+    </style>
+{% endblock %}

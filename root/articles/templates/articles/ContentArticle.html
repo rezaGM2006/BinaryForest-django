@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %} article : {{article.title}} {% endblock %}
+
+{% block content %}
+        
+        <p style="color:#4c1010">{{article.title}}</p>
+        <h6 style="color:rgb(31, 13, 84)">{{article.body}}</h6>
+        <small style="color: darkorange;">{{article.created}}</small>   
+{% endblock %}

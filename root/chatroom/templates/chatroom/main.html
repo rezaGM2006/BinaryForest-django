@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} chatroom {% endblock %}
+
+{% block background-BF %}
+    <style>
+    body {
+        background-image: url("{% static 'chatroom/ChatRoom.png' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 200vh;
+        margin: 0;
+    }
+    </style>
+{% endblock %}
+{% block content %}
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'chatroom:ChatCity' %}" style="color: aliceblue;"><h5>chat</h5></a>
+        {% for topic in topics %}
+            <a href="{% url 'chatroom:ChatCity' topic.id %}">{{topic.topic}}</a>
+        {% endfor %}
+    {% else %}
+        <p>Please <a href="{% url 'accounts:register' %}" style="color: maroon;">register</a> first ot <a href="{% url 'accounts:login' %}" style="color: purple;">log in</a> if you have an account. </p>
+    {% endif %}
+{% endblock %}

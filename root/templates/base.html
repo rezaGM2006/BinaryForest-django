@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+        <title>
+            {% block title %} {% endblock %}
+        </title>
+        {% block background-BF %} {% endblock %}
+        <style>
+            .jumbotron{
+                padding: 50px;
+                margin: 5px;
+                background-color: rgb(10, 120, 54);
+            }
+        </style>
+    </head>
+    <body>
+        {% include 'messages.html' %}
+        {% include 'navbar.html' %}
+        <div class="jumbotron">
+            {% block content %} {% endblock %}
+        </div>
+    </body>
+</html>
