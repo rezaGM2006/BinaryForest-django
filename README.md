@@ -6,7 +6,7 @@
 ##### pip install django Pillow
 ##### Go to the Directory root/
 ##### Enter the command _python manage.py runserver_ to run on the local server
-##### To run, you can create file runserver.py in root/, enter the follwin code in it, and run it
+##### To run, you can create file runserver.py in root/, enter the followin code in it, and run it
 
 ```python
 
